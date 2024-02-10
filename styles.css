@@ -1,0 +1,754 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    width: 1366px;
+    margin: 0 auto;
+}
+
+:root{
+/* Colors */
+--purple: #6B1D57;
+--green:  #74B946; 
+--lightgreen:#8FB946;  
+
+/* Fonts */
+
+/* Poppins */
+--Poppins-regular: "Poppins-regular", sans-serif;
+--Poppins-medium: "Poppins-medium", sans-serif;
+--Poppins-semibold: "Poppins-semibold", sans-serif;
+--Poppins-bold: "Poppins-bold", sans-serif;
+
+/* RobotoCondensed */
+--RobotoCondensed-regular:  "RobotoCondensed", sans-serif;
+--RobotoCondensed-bold:  "RobotoCondensed-bold", sans-serif;
+}
+
+
+/* ----------------------------------- Header styling- Header Nav (part-1)--------------------------------------*/
+header{
+    width: 100%;
+    margin: 0 auto;
+    padding: 32px 16px 21px 16px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    opacity: 1;
+    backdrop-filter: blur(13px);
+    -webkit-backdrop-filter: blur(13px);
+}
+
+.header-container{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.header-nav{
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-nav-hamburger{
+    display: none;
+    width: max-content;
+    height: 24px;
+}
+
+.header-nav-hamburger-bar{
+    width: 25px;
+    height: 4px;
+    background-color: #1B1B1B;
+    border-radius: 2px;
+}
+
+.header-nav-hamburger-bar:nth-of-type(2){
+    margin: 5px 0;
+}
+
+.header-nav-items{
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+    align-items: center;
+    width: 530px;
+}
+nav{
+    display: flex;
+}
+
+.header-nav-items a{
+    text-decoration: none;
+    font-family: var(--Poppins-regular);
+    text-transform: uppercase;
+    color: #22232B;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.header-nav-items .active{
+    font-family: var(--Poppins-bold);
+    color: var(--purple);
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.active{
+    position: relative;
+}
+.active:before{
+    position: absolute;
+    border-bottom: 2px solid var(--purple);
+    width: 38px;
+    transform: translateX(50%);
+    bottom: -7.5px;
+    content: "";
+}
+
+.header-nav-btn{
+    padding: 15px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    border: 2px solid var(--purple);
+    border-radius: 6px;
+    background-color: #fff;
+}
+
+.header-nav-btn img {
+    width: 15px;
+    height: 15px;
+}
+
+.header-nav-btn p{
+    display: block;
+    font-family: var(--Poppins-bold);
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--purple);
+    padding-left: 7px;
+    text-transform: uppercase;
+}
+
+
+/* ----------------------------------- Header styling- Header Search (part-2)-------------------------------------*/
+
+.header-search{
+    display: flex;
+    gap: 72px;
+}
+
+.header-search-box{
+    display: flex;
+    gap: 40px;
+}
+
+#search{
+    width: 1010px;
+    padding: 8.2px 0;
+    border-style: none;
+    border-bottom: 2px solid var(--purple);
+    outline: none;
+    color: #22232B;
+    font-size: 17px;
+    font-family: var(--Poppins-regular);
+    font-weight: 400;
+}
+
+#search::placeholder {
+    font-family: var(--Poppins-regular);
+    color: #22232B;
+    font-weight: 400;
+}
+
+.magnifying-glass{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.magnifying-glass img {
+width: 22px;
+height: 22px;
+}
+
+.time{
+    width: max-content;
+}
+
+.header-search-boxright{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-sortBy-dropdown{
+    display: flex;
+    gap: 30px;
+    font-family: var(--Poppins-regular);
+    font-weight: 400;
+    font-size: 17px;
+    align-items: center;
+    color: #22232B
+}
+
+.angle-down{
+    cursor: pointer;
+    color: #131313;
+}
+
+.header-grid-2-icon img{
+    width: 24px;
+    height: 24px;
+    align-items: center;
+}
+
+.grid-bar-box{
+    display: flex;
+    gap: 28px;
+}
+
+.bars{
+    width: 24px;
+    height: 24px;
+    display: flex;
+    gap: 4px;
+}
+
+.left-bars , .right-bars{
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.right-bars div{
+    height: 3px;
+    width: 4px;
+    background: #D6D6D6 0% 0% no-repeat padding-box;
+}
+
+.left-bars div{
+    height: 3px;
+    width: 16px;
+    background: #D6D6D6 0% 0% no-repeat padding-box;
+}
+
+
+/* ----------------------------------- Header styling- Header Damage type (part-3)-------------------------------------*/
+.header-damagetype-section{
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-damageType-dropdown{
+    font-family: var(--Poppins-regular);
+    font-size: 19px;
+    font-weight: 400;
+    color: #6C46B9;
+    display: flex;
+    gap: 18px;
+    cursor: pointer;
+    align-items: center;
+}
+
+.circle-box{
+    height: 40px;
+    width: 40px; 
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 3px 6px 12px #4444441F;
+    border-radius: 50%;
+    opacity: 0.66;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.circle-box img{
+width: 25px;
+height: 24px;
+}
+
+.header-show-favorites{
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+
+.header-show-favorites span{
+    font-family: var(--Poppins-regular);
+    font-size: 17px;
+    font-weight: 400;
+}
+
+.header-auction-status{
+    display: flex;
+    gap: 88px;
+    justify-content: space-evenly;
+    flex-basis: 651px;
+    font-family: var(--Poppins-regular);
+    color: rgb(34, 35, 43);
+    font-weight: 400;
+    font-size: 17px;
+}
+
+
+#live-auctions, #coming-soon, #ended-auctions {
+    width: 25px;
+    height: 25px;
+    font-family: var(--Poppins-regular);
+    background-color: #E0E0E0;
+    font-weight: 400;
+    font-size: 17px;
+    accent-color: var(--purple);
+    box-shadow: 0px 8px 8px #00000029;
+    opacity: 1;
+    cursor: pointer;
+}
+
+.header-auction-inner{
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+
+.damage-type-grid-box{
+    display: none;
+}
+.responsive-damagetype{
+    display: flex;
+    flex-basis: 40%;
+    justify-content: space-between;
+}
+
+.header-end-layer{
+    display: flex;
+    flex-basis: 40%;
+    justify-content: space-between;
+}
+
+/* ---------------------------------------- Middle- container -----------------------------*/
+
+.second-container{
+    background: #F6F8FD 0% 0% no-repeat padding-box;
+    opacity: 1;
+}
+
+/* ------------------- Form section ---------------- */
+form{
+    margin-top: 24px;
+}
+
+#make{
+    margin-top: 32px;
+}
+
+.form-top-part{
+    width: 283px;
+    height: 560.75px;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 6px 12px 24px #44444414;
+    border-radius: 6px;
+    opacity: 1;
+}
+
+form select{
+    width: 232px;
+    margin: 0 auto;
+    border-style: none;
+    border-bottom: 1px solid #E0E0E0;
+    padding-bottom: 7.2px;
+    outline: none;
+}
+
+.form-top-section{
+    display: flex;
+    flex-direction: column;
+    gap:26px;
+}
+
+
+
+
+.form-middle-part{
+    display: flex;
+    width: 232px;
+    gap: 15px;
+    margin: 0 auto;
+}
+
+form select, .form-bid-part{
+    font-family: var(--Poppins-regular);
+    font-weight: 400;
+    font-size: 18px;
+}
+
+.form-bid-part {
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+    width: 232px;
+    margin: 0 auto;
+}
+
+.auction-id{
+    border-bottom: 1px solid #E0E0E0;
+    padding-bottom: 7.2px;
+}
+.bid-range {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+.bid-range label{
+    padding-bottom: 8px;
+}
+
+.bid-price {
+    display: flex;
+    justify-content: space-between;
+    gap: 6px;
+}
+
+.form-search-reset-btn{
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+    align-items: center;
+   
+}
+
+
+.form-search-btn{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 49px;
+    width: 233px;
+    gap: 58px;
+    border-radius: 6px;
+    background-image: linear-gradient(to right, #33176C, #6B1D57);
+    color: #fff;
+    font-family: var(--Poppins-regular);
+    font-weight: 600;
+    font-size: 14px;
+    text-transform: uppercase; 
+    cursor: pointer;
+}
+
+.form-search-btn img{
+    margin-left: 16px;
+}
+
+.form-reset-btn button {
+    width: 48px;
+    height: 20px;
+    text-transform: uppercase;
+    border-style: none;
+    border-bottom: 1px solid #22232B;
+    color: #444444;
+    cursor: pointer;
+    font-family: var(--Poppins-regular);
+    font-weight: 600;
+    font-size: 14px;
+    background-color: #fff;
+}
+
+/* ----------------------------------- Main middle container ----------------------------- */
+
+.middle-container{
+    display: flex;
+}
+
+/* ----------------------------------- Vehicle card section ----------------------- */
+
+
+.law-highlighted-logo{
+    width: 40px;
+    height: 40px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 0px 15px #A375FFB5;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    margin-top: -79px;
+    margin-left: 240px;
+}
+
+
+.middle-container-right , .pagination-container {
+    flex-basis: 75%;
+    margin: 0 auto;
+    margin-top: 24px;
+}
+
+.vehicles-card-section {
+    display: flex;
+    margin: 0 auto;
+    gap: 20px;
+    flex-wrap: wrap;
+    /* gap: 21px; */
+}
+
+
+.vehicle-card-top-section {
+    text-align: center;
+    margin-top: 8px
+}
+
+.vehicle-card-top-section p {
+    background: transparent linear-gradient(264deg, #E73054 0%, #B94646 100%) 0% 0% no-repeat padding-box;
+    padding: 5px 52px;
+    border-radius: 3px;
+    color: #fff;
+    font-family: var(--Poppins-medium);
+    font-weight: 400;
+    font-size: 12px;
+    margin-bottom: 8px;
+}
+
+.car-img{
+    width: 295px;
+    height: 250.45px;
+}
+
+.star-logo{
+width: 25px;
+height: 24px;
+position: absolute;
+margin-left: -40px;
+margin-top: 24px;
+}
+
+.vehicle-card-middle-section{
+    display: flex;
+    width: 95%;
+    justify-content: space-between;   
+}
+
+.vehicle-card-middle-section-inner{
+    display: flex;
+    gap: 11px;
+}
+
+.vehicle-name{
+    font-family: var(--Poppins-bold);
+    color: #45454D;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.vehicle-year{
+    font-family: var(--Poppins-medium);
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.vehicle-card-location-section{
+    display: flex;
+    width: 95%;
+    position: relative;
+    align-items: center;
+    gap: 17px;
+}
+
+.vehicle-card-location-section img{
+    width: 17.5px;
+    height: 18px;
+}
+
+.vehicle-card-location-name span{
+color: #989898;
+font-family: var(--Poppins-regular);
+font-weight: 400;
+font-size: 12px;
+}
+
+.vehicle-card-location-name p{
+    font-family: var(--RobotoCondensed-bold);
+    font-size: 17px;
+    font-weight: 600;
+}
+
+
+/* --------------------------------- Sold buy section ------------------ */
+
+.sold-buy-section{
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+}
+.sold, .buy{
+    display: flex;
+    gap: 11px;
+    align-items: center;
+}
+
+.sold-for p {
+    font-family: var(--Poppins-bold);
+    font-weight: 700;
+}
+
+.sar{
+    font-size: 13px;
+    color: #8FB946;
+    font-family: var(--RobotoCondensed-regular);
+}
+
+/* ------------------------------ view bids --------------------------- */
+
+.total-bids{
+    display: flex;
+    justify-content: space-between;
+    width: 95%;
+    background: transparent linear-gradient(263deg, #8FB946 0%, #74B946 100%) 0% 0% no-repeat padding-box;
+    border-radius: 3px;
+    align-items: center;
+    padding: 8px;
+    color: #fff;
+}
+
+.total-bids p{
+    width: 95%;
+    text-align: center;
+}
+
+
+.vehicle-card {
+    /* width: 275px; */
+    flex-basis: 31%;
+    /* height: 498px; */
+    box-shadow: 6px 12px 24px #44444414;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18.5px;
+    margin: 0 auto;
+    padding: 8px 8px 15px;
+}
+
+/* ---------------------------- Pagination ---------------------- */
+
+.pagination-container{
+    display: flex;
+    gap: 2.4rem;
+    margin: 0 auto;
+    justify-content: center;
+    padding: 44px 0;
+}
+
+.pagination-container div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.pagination-container div{
+    width: 42px;
+    height: 42px;
+}
+
+.current-page{
+
+    background: transparent linear-gradient(225deg, #6B1D57 0%, #33176C 100%) 0% 0% no-repeat padding-box;
+    border-radius: 3px;
+    opacity: 1;
+    color: #fff
+}
+
+.pagination-container div:hover{
+    background: transparent linear-gradient(225deg, #6B1D57 0%, #33176C 100%) 0% 0% no-repeat padding-box;
+    border-radius: 3px;
+    opacity: 1;
+    cursor: pointer;
+    color: #fff
+}
+
+
+.pagination-container .pagination-resp-next{
+    display: none;
+}
+
+
+/* -------------------------------- Footer section ---------------------------------- */
+
+footer{
+    display: flex;
+    justify-content: center;
+    padding: 25px;
+    align-items: center;
+    gap: 70px;
+}
+
+.footer-img-logo{
+    display: flex;
+}
+
+.footer-nav{
+    gap: 70px;
+}
+
+.footer-nav-links {
+    display: flex;
+    gap: 40px;
+    width: 54%;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-nav-links a{
+    text-decoration: none;
+    color: #22232B;
+    font-family: var(--Poppins-regular);
+    font-weight: 400;
+    font-size: 9px;
+    text-transform: uppercase;
+    text-align: left;
+}
+
+.footer-verticalbar{
+    width: 0px;
+    height: 48px;
+    border: 1px solid #E2E2E2;
+    background-color: #E2E2E2;
+    opacity: 1;
+}
+
+.socials{
+    display: flex;
+    gap: 45px;
+
+}
+
+.footer-questions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--Poppins-regular);
+    font-weight: 400;
+    font-size: 10px;
+    text-transform: uppercase;
+}
+
+.footer-questions a {
+    font-weight: 600;
+    
+}
+
+.footer-img-mobilelogo{
+    display: none;
+}
+
+.footer-envelope{
+    display: none;
+}
+

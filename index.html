@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CarMazad - House of Vehicles</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="responsive.css">
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/684626a901.js" crossorigin="anonymous"></script>    
+</head>
+
+    <style>
+        /* Poppins Fonts added */
+
+        @font-face {
+        font-family: "Poppins-regular", sans-serif;
+        font-weight: 400;
+        src: url("/Assets/fonts/Poppins-Regular.woff2") format("woff2");
+        }  
+        @font-face {
+        font-family: "Poppins-medium", sans-serif;
+        font-weight: 500;
+        src: url("/Assets/fonts/Poppins-Medium.woff2") format("woff2");
+        }
+        @font-face {
+        font-family: "Poppins-semibold", sans-serif;
+        font-weight: 600;
+        src: url("/Assets/fonts/Poppins-SemiBold.woff2") format("woff2");
+        }
+        @font-face {
+        font-family: "Poppins-bold", sans-serif;
+        font-weight: 700;
+        src: url("/Assets/fonts/Poppins-Bold.woff2") format("woff2");
+        }
+
+        /* Roboto Fonts added */
+        @font-face {
+        font-family: "RobotoCondensed", sans-serif;
+        font-weight: 400;
+        src: url("/Assets/fonts/RobotoCondensed-Regular.woff2") format("woff2");
+        }
+        @font-face {
+        font-family: "RobotoCondensed-bold", sans-serif;
+        font-weight: 700;
+        src: url("/Assets/fonts/RobotoCondensed-Bold.woff2") format("woff2");
+        }
+
+    </style>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="header-container">
+                <div class="header-nav">
+
+                    <!-- hamburger adaptive code -->
+                    <div class="header-nav-hamburger">
+                        <div class="header-nav-hamburger-bar"></div>
+                        <div class="header-nav-hamburger-bar"></div>   
+                        <div class="header-nav-hamburger-bar"></div>
+                    </div>
+                    <!-- end -->
+
+                    <div class="header-nav-logo">
+                        <img src="/Assets/images/header-logo.png" alt="header-logo">
+                    </div>   
+                    <nav>
+                        <ul class="header-nav-items">
+                            <li><a class="active" href="#">VEHICLES</a></li>
+                            <li><a href="#">FAQS</a></li>
+                            <li><a href="#">CONTACT US</a></li>
+                            <li><img src="/Assets/images/uae.svg" alt="country-logo"></li>
+                        </ul>
+                        <button class="header-nav-btn">
+                            <img src="/Assets/images/user.svg" alt="user-icon">
+                            <p>Sign in</p>
+                        </button>
+                    </nav>
+                    
+
+
+                </div>
+
+                <div class="header-search">
+                        <div class="header-search-box"> 
+                            <span class="magnifying-glass"><img src="/Assets/images/search-icon.svg" alt="search-icon"></span>
+                            <input type="search" name="search" id="search" placeholder="Toyota Camry 2020">
+                            <div class="header-sortBy-dropdown">
+                                <div class="time">By Time </div>   
+                                <span class="angle-down"><i class="fa-solid fa-angle-down"></i></span></i>
+                            </div>
+                        </div>
+
+
+                        <div class="header-search-boxright">
+                        
+                            <div class="grid-bar-box">
+                                <div class="header-grid-2-icon"><img src="/Assets/images/grid.png" alt="grid-icon"></div>
+                                
+                                <div class="bars">
+                                    <div class="left-bars">
+                                        <div></div>
+                                        <div></div>
+                                        <div></div>
+                                    </div>
+                                    <div class="right-bars">
+                                        <div></div>
+                                        <div></div>
+                                        <div></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                </div>
+                
+                <div class="header-damagetype-section">
+                    <div class="header-end-layer">
+                        <!-- <select name="" id="">
+                            <option value="Damage Type">Damage Type</option>
+                        </select> -->
+                        <div class="header-damageType-dropdown">Damage Type
+                            <span class="angle-down"><i class="fa-solid fa-angle-down"></i></span></i>
+                        </div>
+                        <div class="header-show-favorites">
+                            <div class="circle-box"><img src="/Assets/images/star.svg" alt="star"></div>
+                            <div class="header-show-favorites-text">
+                                <span>Show Favorites</span>
+                            </div>
+
+                            <div class="damage-type-grid-box">
+                                <div class="header-grid-2-icon"><img src="/Assets/images/grid.png" alt="grid-icon"></div>
+                                
+                                <div class="bars">
+                                    <div class="left-bars">
+                                        <div></div>
+                                        <div></div>
+                                        <div></div>
+                                    </div>
+                                    <div class="right-bars">
+                                        <div></div>
+                                        <div></div>
+                                        <div></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="header-auction-status">
+                        <div class="header-auction-inner">
+                            <input type="checkbox" name="live-auctions" id="live-auctions"></input>
+                            <span>Live Auctions</span> 
+                        </div>
+                        <div class="header-auction-inner">
+                            <input type="checkbox" name="coming-soon" id="coming-soon"></input>
+                            <span>Coming Soon</span>
+                        </div>
+                        <div class="header-auction-inner">
+                            <input type="checkbox" name="ended-auctions" id="ended-auctions"></input>
+                            Ended Auctions</div>
+                    </div>
+                </div>     
+            </div>
+        </div>
+    </header>
+
+    <section class="second-container">
+        <div class="container">
+            <div class="middle-container">
+            <section class="middle-container-left">
+                <form action="">
+                    <div class="form-top-part">
+                    <div class="form-top-section">            <!-- --------------  item-1 -->
+                        <select name="Make" id="make">
+                            <option value="">Make</option>
+                            <option value="">Make</option>
+                        </select>
+
+                        <select name="Model" id="model">
+                            <option value="">Model</option>
+                            <option value="">Model</option>
+                        </select>
+
+                        <select name="City" id="city">                        
+                            <option value="">City</option>
+                            <option value="">City</option>
+                        </select>
+                    </div>                                 
+                
+                    <div class="form-middle-part">            <!-- --------------  item-2 -->
+                        <select name="From" id="from-to">
+                            <option value="">From</option>
+                            <option value="">From</option>
+                        </select>
+        
+                        <select name="To" id="from-to">
+                            <option value="">To</option>
+                            <option value="">To</option>
+                        </select>
+                    </div>
+                        
+                    <div class="form-bid-part">               <!-- --------------  item-3 -->
+                        <div class="auction-id">Auction ID</div>
+                        <div class="bid-range">
+                            <label>Current Bid</label>
+                            <input type="range" id="bid-price" name="bid" min="0" max="10000">
+                            <div class="bid-price">
+                                <div>$0</div> 
+                                <div>$10,000+</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-search-reset-btn">       <!-- --------------  item-4 -->
+                        <div class="form-search-btn">
+                            <img src="/Assets/images/search.svg" alt="search-icon">
+                            <div>search</div>
+                        </div>
+                        <div class="form-reset-btn"><button>reset</button></div>
+                    </div>
+                    </div>
+                </form>
+            </section>
+
+            <section class="middle-container-right">
+                <div class="vehicles-card-section">
+                    <div class="vehicle-card vehicle-card1">          <!-- --------------  card-1 row-1 --> 
+                        
+                        <div class="vehicle-card-top-section">
+                            <p>Thursday 12 Dec 2019 - 15:10</p>
+                            <img class="car-img" src="/Assets/images/2019-Toyota-camry-edit.png" alt="Toyota-camry">
+                            <img class="star-logo" src="/Assets/images/star.svg" alt="star-logo">
+                        </div>
+                        <div class="vehicle-card-middle-section">
+                            <p class="vehicle-name">Toyota Camry SE</p>
+                            <p class="vehicle-year">2019</p>
+                            <div class="law-highlighted-logo">
+                                <img src="/Assets/images/law-purple.svg" alt="law-highlighted-logo">
+                            </div>
+                        </div>
+                        <div class="vehicle-card-middle-section">
+                            <div class="vehicle-card-middle-section-inner">
+                                <img src="/Assets/images/overturned-vehicle.svg" alt="overturned-vehicle">
+                                <p>Accident</p>
+                            </div>
+                            <div class="vehicle-card-middle-section-inner">
+                                <img src="/Assets/images/visible.svg" alt="visible-eye-icon">
+                                <p>7,732 Views</p>
+                            </div>
+                        </div>
+                        <div class="vehicle-card-location-section">
+                            <div>
+                                <img src="/Assets/images/location.svg" alt="location-icon">
+                            </div>
+                            <div class="vehicle-card-location-name">
+                                <span>Location</span>
+                                <p>Riyadh Yard, Saudi Arabia</p> 
+                            </div>
+                        </div>
+                        <div class="sold-buy-section">
+                            <div class="sold">
+                                <div>
+                                    <img src="/Assets/images/law-green.svg" alt="law-green-icon">
+                                </div>
+                                <div class="sold-for">
+                                    <span>Sold for</span>
+                                    <p>23,911<span class="sar">SAR</span></p>
+                                </div>
+                            </div>
+                            <div class="buy">
+                                <div>
+                                    <img src="/Assets/images/money.svg" alt="money-icon">
+                                </div>
+                                <div>
+                                    <span>Buy now</span>
+                                    <p>23,911<span class="sar">SAR</span></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="total-bids">
+                                <p>View 3 Bids</p>
+                                <i class="fa-solid fa-angle-down"></i>
+                        </div>
+                    </div>
+
+
+                    
+                    <div class="vehicle-card vehicle-card2">            <!-- --------------  card-2 row-1 --> 
+                        <!-- copy start -->
+                        <div class="vehicle-card-top-section">
+                            <p>Thursday 12 Dec 2019 - 15:10</p>
+                            <!-- <img class="car-img" src="/Assets/images/2019-Toyota-camry-edit.png" alt="Toyota-camry"> -->
+                            <img class="car-img" src="/Assets/images/2019-toyota-camry-sedan-white-myedit.png" alt="Toyota-camry">
+                            <img class="star-logo" src="/Assets/images/star-nobg.svg" alt="star-nobg-logo">
+                        </div>
+                        <div class="vehicle-card-middle-section">
+                            <p class="vehicle-name">Toyota Camry SE</p>
+                            <p class="vehicle-year">2019</p>
+                            <div class="law-highlighted-logo">
+                                <img src="/Assets/images/law-purple.svg" alt="law-highlighted-logo">
+                            </div>
+                        </div>
+                        <div class="vehicle-card-middle-section">
+                            <div class="vehicle-card-middle-section-inner">
+                                <img src="/Assets/images/overturned-vehicle.svg" alt="overturned-vehicle">
+                                <p>Accident</p>
+                            </div>
+                            <div class="vehicle-card-middle-section-inner">
+                                <img src="/Assets/images/visible.svg" alt="visible-eye-icon">
+                                <p>7,732 Views</p>
+                            </div>
+                        </div>
+                        <div class="vehicle-card-location-section">
+                            <div>
+                                <img src="/Assets/images/location.svg" alt="location-icon">
+                            </div>
+                            <div class="vehicle-card-location-name">
+                                <span>Location</span>
+                                <p>Riyadh Yard, Saudi Arabia</p> 
+                            </div>
+                        </div>
+                        <div class="sold-buy-section">
+                            <div class="sold">
+                                <div>
+                                    <img src="/Assets/images/law-green.svg" alt="law-green-icon">
+                                </div>
+                                <div>
+                                    <span>Sold for</span>
+                                    <p>23,911<span class="sar">SAR</span></p>
+                                </div>
+                            </div>
+                            <div class="buy">
+                                <div>
+                                    <img src="/Assets/images/money.svg" alt="money-icon">
+                                </div>
+                                <div>
+                                    <span>Buy now</span>
+                                    <p>23,911<span class="sar">SAR</span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="total-bids">
+                                <p>View 3 Bids</p>
+                                <i class="fa-solid fa-angle-down"></i>
+                        </div>
+                        <!-- copy end -->
+                    </div>
+                    
+                    <div class="vehicle-card vehicle-card3">            <!-- --------------  card-3 row-1 --> 
+                        <!-- copy start -->
+                        <div class="vehicle-card-top-section">
+                            <p>Thursday 12 Dec 2019 - 15:10</p>
+                            <img class="car-img" src="/Assets/images/toyota_Camry-Hybrid_2009_image-08-1024@2x.png" alt="Toyota-camry">
+                            <img class="star-logo" src="/Assets/images/star-nobg.svg" alt="star-nobg-logo">
+                        </div>
+                        <div class="vehicle-card-middle-section">
+                            <p class="vehicle-name">Toyota Camry SE</p>
+                            <p class="vehicle-year">2019</p>
+                            <div class="law-highlighted-logo">
+                                <img src="/Assets/images/law-purple.svg" alt="law-highlighted-logo">
+                            </div>
+                        </div>
+                        <div class="vehicle-card-middle-section">
+                            <div class="vehicle-card-middle-section-inner">
+                                <img src="/Assets/images/overturned-vehicle.svg" alt="overturned-vehicle">
+                                <p>Accident</p>
+                            </div>
+                            <div class="vehicle-card-middle-section-inner">
+                                <img src="/Assets/images/visible.svg" alt="visible-eye-icon">
+                                <p>7,732 Views</p>
+                            </div>
+                        </div>
+                        <div class="vehicle-card-location-section">
+                            <div>
+                                <img src="/Assets/images/location.svg" alt="location-icon">
+                            </div>
+                            <div class="vehicle-card-location-name">
+                                <span>Location</span>
+                                <p>Riyadh Yard, Saudi Arabia</p> 
+                            </div>
+                        </div>
+                        <div class="sold-buy-section">
+                            <div class="sold">
+                                <div>
+                                    <img src="/Assets/images/law-green.svg" alt="law-green-icon">
+                                </div>
+                                <div>
+                                    <span>Sold for</span>
+                                    <p>23,911<span class="sar">SAR</span></p>
+                                </div>
+                            </div>
+                            <div class="buy">
+                                <div>
+                                    <img src="/Assets/images/money.svg" alt="money-icon">
+                                </div>
+                                <div>
+                                    <span>Buy now</span>
+                                    <p>23,911<span class="sar">SAR</span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="total-bids">                          
+                                <p>View 3 Bids</p>
+                                <i class="fa-solid fa-angle-down"></i>                              
+                        </div>
+                        <!-- copy end -->
+                    </div>    
+
+                    <div class="vehicle-card vehicle-card4">            <!-- --------------  card-4 row-2 --> 
+                        <!-- copy start -->
+                        <div class="vehicle-card-top-section">
+                            <p>Thursday 12 Dec 2019 - 15:10</p>
+                            <img class="car-img" src="/Assets/images/Teaser_alt@2x.png" alt="Toyota-camry">
+                            <img class="star-logo" src="/Assets/images/star-nobg.svg" alt="star-nobg-logo">
+                        </div>
+                        <div class="vehicle-card-middle-section">
+                            <p class="vehicle-name">Toyota Camry SE</p>
+                            <p class="vehicle-year">2019</p>
+                            <div class="law-highlighted-logo">
+                                <img src="/Assets/images/law-purple.svg" alt="law-highlighted-logo">
+                            </div>
+                        </div>
+                        <div class="vehicle-card-middle-section">
+                            <div class="vehicle-card-middle-section-inner">
+                                <img src="/Assets/images/overturned-vehicle.svg" alt="overturned-vehicle">
+                                <p>Accident</p>
+                            </div>
+                            <div class="vehicle-card-middle-section-inner">
+                                <img src="/Assets/images/visible.svg" alt="visible-eye-icon">
+                                <p>7,732 Views</p>
+                            </div>
+                        </div>
+                        <div class="vehicle-card-location-section">
+                            <div>
+                                <img src="/Assets/images/location.svg" alt="location-icon">
+                            </div>
+                            <div class="vehicle-card-location-name">
+                                <span>Location</span>
+                                <p>Riyadh Yard, Saudi Arabia</p> 
+                            </div>
+                        </div>
+                        <div class="sold-buy-section">
+                            <div class="sold">
+                                <div>
+                                    <img src="/Assets/images/law-green.svg" alt="law-green-icon">
+                                </div>
+                                <div>
+                                    <span>Sold for</span>
+                                    <p>23,911<span class="sar">SAR</span></p>
+                                </div>
+                            </div>
+
+                            <div class="buy">
+                                <div>
+                                    <img src="/Assets/images/money.svg" alt="money-icon">
+                                </div>
+                                <div>
+                                    <span>Buy now</span>
+                                    <p>23,911<span class="sar">SAR</span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="total-bids">
+                                <p>View 3 Bids</p>
+                                <i class="fa-solid fa-angle-down"></i>                 
+                        </div>
+                        <!-- copy end -->
+                    </div>
+
+                    <div class="vehicle-card vehicle-card5">            <!-- --------------  card-5 row-2 --> 
+                        <!-- copy start -->
+                        <div class="vehicle-card-top-section">
+                            <p>Thursday 12 Dec 2019 - 15:10</p>
+                            <img class="car-img" src="/Assets/images/01-2018-Toyota-Camry-Hybrid-quick.png" alt="Toyota-camry">
+                            <img class="star-logo" src="/Assets/images/star-nobg.svg" alt="star-nobg-logo">
+                        </div>
+                        <div class="vehicle-card-middle-section">
+                            <p class="vehicle-name">Toyota Camry SE</p>
+                            <p class="vehicle-year">2019</p>
+                            <div class="law-highlighted-logo">
+                                <img src="/Assets/images/law-purple.svg" alt="law-highlighted-logo">
+                            </div>
+                        </div>
+                        <div class="vehicle-card-middle-section">
+                            <div class="vehicle-card-middle-section-inner">
+                                <img src="/Assets/images/overturned-vehicle.svg" alt="overturned-vehicle">
+                                <p>Accident</p>
+                            </div>
+                            <div class="vehicle-card-middle-section-inner">
+                                <img src="/Assets/images/visible.svg" alt="visible-eye-icon">
+                                <p>7,732 Views</p>
+                            </div>
+                        </div>
+                        <div class="vehicle-card-location-section">
+                            <div>
+                                <img src="/Assets/images/location.svg" alt="location-icon">
+                            </div>
+                            <div class="vehicle-card-location-name">
+                                <span>Location</span>
+                                <p>Riyadh Yard, Saudi Arabia</p> 
+                            </div>
+                        </div>
+                        <div class="sold-buy-section">
+                            <div class="sold">
+                                <div>
+                                    <img src="/Assets/images/law-green.svg" alt="law-green-icon">
+                                </div>
+                                <div>
+                                    <span>Sold for</span>
+                                    <p>23,911<span class="sar">SAR</span></p>
+                                </div>
+                            </div>
+                            <div class="buy">
+                                <div>
+                                    <img src="/Assets/images/money.svg" alt="money-icon">
+                                </div>
+                                <div>
+                                    <span>Buy now</span>
+                                    <p>23,911<span class="sar">SAR</span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="total-bids">
+                                <p>View 3 Bids</p>
+                                <i class="fa-solid fa-angle-down"></i>                             
+                        </div>
+                        <!-- copy end -->
+                    </div>
+
+                    <div class="vehicle-card vehicle-card6">            <!-- --------------  card-6 row-2 --> 
+                        <!-- copy start -->
+                        <div class="vehicle-card-top-section">
+                            <p>Thursday 12 Dec 2019 - 15:10</p>
+                            <img class="car-img" src="/Assets/images/2019-Toyota-camry-edit.png" alt="Toyota-camry">
+                            <img class="star-logo" src="/Assets/images/star-nobg.svg" alt="star-nobg-logo">
+                        </div>
+                        <div class="vehicle-card-middle-section">
+                            <p class="vehicle-name">Toyota Camry SE</p>
+                            <p class="vehicle-year">2019</p>
+                            <div class="law-highlighted-logo">
+                                <img src="/Assets/images/law-purple.svg" alt="law-highlighted-logo">
+                            </div>
+                        </div>
+                        <div class="vehicle-card-middle-section">
+                            <div class="vehicle-card-middle-section-inner">
+                                <img src="/Assets/images/overturned-vehicle.svg" alt="overturned-vehicle">
+                                <p>Accident</p>
+                            </div>
+                            <div class="vehicle-card-middle-section-inner">
+                                <img src="/Assets/images/visible.svg" alt="visible-eye-icon">
+                                <p>7,732 Views</p>
+                            </div>
+                        </div>
+                        <div class="vehicle-card-location-section">
+                            <div>
+                                <img src="/Assets/images/location.svg" alt="location-icon">
+                            </div>
+                            <div class="vehicle-card-location-name">
+                                <span>Location</span>
+                                <p>Riyadh Yard, Saudi Arabia</p> 
+                            </div>
+                        </div>
+                        <div class="sold-buy-section">
+                            <div class="sold">
+                                <div>
+                                    <img src="/Assets/images/law-green.svg" alt="law-green-icon">
+                                </div>
+                                <div>
+                                    <span>Sold for</span>
+                                    <p>23,911<span class="sar">SAR</span></p>
+                                </div>
+                            </div>
+                            <div class="buy">
+                                <div>
+                                    <img src="/Assets/images/money.svg" alt="money-icon">
+                                </div>
+                                <div>
+                                    <span>Buy now</span>
+                                    <p>23,911<span class="sar">SAR</span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="total-bids">                  
+                                <p>View 3 Bids</p>
+                                <i class="fa-solid fa-angle-down"></i>                            
+                        </div>
+                        <!-- copy end -->
+                    </div>
+
+                    <div class="vehicle-card vehicle-card7">            <!-- --------------  card-7 row-3 --> 
+                        <!-- copy start -->
+                        <div class="vehicle-card-top-section">
+                            <p>Thursday 12 Dec 2019 - 15:10</p>
+                            <img class="car-img" src="/Assets/images/blue-myedit.png" alt="Toyota-camry">
+                            <img class="star-logo" src="/Assets/images/star-nobg.svg" alt="star-nobg-logo">
+                        </div>
+                        <div class="vehicle-card-middle-section">
+                            <p class="vehicle-name">Toyota Camry SE</p>
+                            <p class="vehicle-year">2019</p>
+                            <div class="law-highlighted-logo">
+                                <img src="/Assets/images/law-purple.svg" alt="law-highlighted-logo">
+                            </div>
+                        </div>
+                        <div class="vehicle-card-middle-section">
+                            <div class="vehicle-card-middle-section-inner">
+                                <img src="/Assets/images/overturned-vehicle.svg" alt="overturned-vehicle">
+                                <p>Accident</p>
+                            </div>
+                            <div class="vehicle-card-middle-section-inner">
+                                <img src="/Assets/images/visible.svg" alt="visible-eye-icon">
+                                <p>7,732 Views</p>
+                            </div>
+                        </div>
+                        <div class="vehicle-card-location-section">
+                            <div>
+                                <img src="/Assets/images/location.svg" alt="location-icon">
+                            </div>
+                            <div class="vehicle-card-location-name">
+                                <span>Location</span>
+                                <p>Riyadh Yard, Saudi Arabia</p> 
+                            </div>
+                        </div>
+                        <div class="sold-buy-section">
+                            <div class="sold">
+                                <div>
+                                    <img src="/Assets/images/law-green.svg" alt="law-green-icon">
+                                </div>
+                                <div>
+                                    <span>Sold for</span>
+                                    <p>23,911<span class="sar">SAR</span></p>
+                                </div>
+                            </div>
+
+                            <div class="buy">
+                                <div>
+                                    <img src="/Assets/images/money.svg" alt="money-icon">
+                                </div>
+                                <div>
+                                    <span>Buy now</span>
+                                    <p>23,911<span class="sar">SAR</span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="total-bids">                               
+                                <p>View 3 Bids</p>
+                                <i class="fa-solid fa-angle-down"></i>                      
+                        </div>
+                        <!-- copy end -->
+                    </div>
+
+                    <div class="vehicle-card vehicle-card8">            <!-- --------------  card-8 row-3 --> 
+                        <!-- copy start -->
+                        <div class="vehicle-card-top-section">
+                            <p>Thursday 12 Dec 2019 - 15:10</p>
+                            <img class="car-img" src="/Assets/images/2019-Toyota-camry-edit.png" alt="Toyota-camry">
+                            <img class="star-logo" src="/Assets/images/star-nobg.svg" alt="star-nobg-logo">
+                        </div>
+                        <div class="vehicle-card-middle-section">
+                            <p class="vehicle-name">Toyota Camry SE</p>
+                            <p class="vehicle-year">2019</p>
+                            <div class="law-highlighted-logo">
+                                <img src="/Assets/images/law-purple.svg" alt="law-highlighted-logo">
+                            </div>
+                        </div>
+                        <div class="vehicle-card-middle-section">
+                            <div class="vehicle-card-middle-section-inner">
+                                <img src="/Assets/images/overturned-vehicle.svg" alt="overturned-vehicle">
+                                <p>Accident</p>
+                            </div>
+                            <div class="vehicle-card-middle-section-inner">
+                                <img src="/Assets/images/visible.svg" alt="visible-eye-icon">
+                                <p>7,732 Views</p>
+                            </div>
+                        </div>
+                        <div class="vehicle-card-location-section">
+                            <div>
+                                <img src="/Assets/images/location.svg" alt="location-icon">
+                            </div>
+                            <div class="vehicle-card-location-name">
+                                <span>Location</span>
+                                <p>Riyadh Yard, Saudi Arabia</p> 
+                            </div>
+                        </div>
+                        <div class="sold-buy-section">
+                            <div class="sold">
+                                <div>
+                                    <img src="/Assets/images/law-green.svg" alt="law-green-icon">
+                                </div>
+                                <div>
+                                    <span>Sold for</span>
+                                    <p>23,911<span class="sar">SAR</span></p>
+                                </div>
+                            </div>
+
+                            <div class="buy">
+                                <div>
+                                    <img src="/Assets/images/money.svg" alt="money-icon">
+                                </div>
+                                <div>
+                                    <span>Buy now</span>
+                                    <p>23,911<span class="sar">SAR</span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="total-bids">                              
+                                <p>View 3 Bids</p>
+                                <i class="fa-solid fa-angle-down"></i>                              
+                        </div>
+                        <!-- copy end -->
+                    </div>
+
+                    <div class="vehicle-card vehicle-card9">            <!-- --------------  card-9 row-3 --> 
+                        <!-- copy start -->
+                        <div class="vehicle-card-top-section">
+                            <p>Thursday 12 Dec 2019 - 15:10</p>
+                            <img class="car-img" src="/Assets/images/1@2x.png" alt="Toyota-camry">
+                            <img class="star-logo" src="/Assets/images/star-nobg.svg" alt="star-nobg-logo">
+                        </div>
+                        <div class="vehicle-card-middle-section">
+                            <p class="vehicle-name">Toyota Camry SE</p>
+                            <p class="vehicle-year">2019</p>
+                            <div class="law-highlighted-logo">
+                                <img src="/Assets/images/law-purple.svg" alt="law-highlighted-logo">
+                            </div>
+                        </div>
+                        <div class="vehicle-card-middle-section">
+                            <div class="vehicle-card-middle-section-inner">
+                                <img src="/Assets/images/overturned-vehicle.svg" alt="overturned-vehicle">
+                                <p>Accident</p>
+                            </div>
+                            <div class="vehicle-card-middle-section-inner">
+                                <img src="/Assets/images/visible.svg" alt="visible-eye-icon">
+                                <p>7,732 Views</p>
+                            </div>
+                        </div>
+                        <div class="vehicle-card-location-section">
+                            <div>
+                                <img src="/Assets/images/location.svg" alt="location-icon">
+                            </div>
+                            <div class="vehicle-card-location-name">
+                                <span>Location</span>
+                                <p>Riyadh Yard, Saudi Arabia</p> 
+                            </div>
+                        </div>
+                        <div class="sold-buy-section">
+                            <div class="sold">
+                                <div>
+                                    <img src="/Assets/images/law-green.svg" alt="law-green-icon">
+                                </div>
+                                <div>
+                                    <span>Sold for</span>
+                                    <p>23,911<span class="sar">SAR</span></p>
+                                </div>
+                            </div>
+
+                            <div class="buy">
+                                <div>
+                                    <img src="/Assets/images/money.svg" alt="money-icon">
+                                </div>
+                                <div>
+                                    <span>Buy now</span>
+                                    <p>23,911<span class="sar">SAR</span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="total-bids">                              
+                                <p>View 3 Bids</p>
+                                <i class="fa-solid fa-angle-down"></i>                              
+                        </div>
+                        <!-- copy end -->
+                    </div>
+                </div>
+                
+                <div class="pagination-container">
+                    <div class="current-page">1</div>
+                    <div>2</div>
+                    <div>3</div>
+                    <div>4</div>
+                    <div>5</div>
+                    <div class="pagination-resp-next">&raquo;</div>
+                    <div class="pagination-resp">6</div>
+                    <div class="pagination-resp">7</div>
+                    <div class="pagination-resp">8</div>
+                    <div class="pagination-resp">9</div>
+                    <div class="pagination-resp">10</div>
+                    <div class="pagination-resp">11</div>
+                    <div class="pagination-resp">12</div>
+                    <div class="pagination-resp">&raquo;</div>
+                </div>
+            </section>
+
+            
+
+        </div>
+        </div>
+    </section>
+    
+    <section>
+        <div class="container">
+        <footer>
+            <div class="footer-img-logo">
+                <img src="/Assets/images/header-logo.png" alt="footer-logo">
+            </div> 
+            <div class="footer-img-mobilelogo">
+                <img src="/Assets/images/header-mobile-logo.svg" alt="AwalMazaed-logo">
+            </div>
+            <div class="footer-verticalbar">
+            </div>
+            <nav class="footer-nav">
+                <div class="footer-nav-links">
+                    <a href="#">TERMS & CONDITIONS</a>
+                    <a href="#">PRIVACY POLICY</a>
+                    <a href="#">FAQS</a>
+                </div>
+                <div class="footer-verticalbar">
+
+                </div>
+                <div class="footer-questions">
+                    QUESTIONS? <a href="#">SUPPORT@CARMAZAD.COM</a>
+                </div>
+            </nav>
+            <div class="footer-verticalbar">
+
+            </div>
+            <div class="socials">
+                <img src="/Assets/images/socials-instagram.svg" alt="socials-instagram-logo">
+                <img src="/Assets/images/socials-facebook.svg" alt="socials-facebook-logo">
+                <img src="/Assets/images/socials-twitter.svg" alt="socials-twitter-logo">
+            </div>
+            <div class="footer-envelope">
+            <img src="/Assets/images/envelope-solid.svg" alt="envelope-image">
+            </div>
+        </footer>
+        </div>
+    </section>
+</body>
+</html>

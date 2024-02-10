@@ -1,0 +1,234 @@
+
+:root{
+    /* Colors */
+    --purple: #6B1D57;
+    --green:  #74B946; 
+    --lightgreen:#8FB946;  
+    
+    /* Fonts */
+    
+    /* Poppins */
+    --Poppins-regular: "Poppins-regular", sans-serif;
+    --Poppins-medium: "Poppins-medium", sans-serif;
+    --Poppins-semibold: "Poppins-semibold", sans-serif;
+    --Poppins-bold: "Poppins-bold", sans-serif;
+    
+    /* RobotoCondensed */
+    --RobotoCondensed-regular:  "RobotoCondensed", sans-serif;
+    --RobotoCondensed-bold:  "RobotoCondensed-bold", sans-serif;
+    }
+    
+
+    @media screen and (min-width: 0px) and (max-width: 1000px){
+    form{
+        display: none;
+    }
+}
+
+@media screen and (min-width: 0px) and (max-width: 376px) {
+
+    .container{
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    /* Header - responsive  */
+    
+
+    .header-container{
+        width: 100%;
+        margin: 0 auto;
+        gap: 25px;
+    }
+    .header-nav{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;    
+    }
+
+    .header-nav-btn p{
+        display: none;
+    }
+    .header-nav-btn{
+        padding: 12px 15px;
+    }
+
+    .header-sortBy-dropdown{
+        /* gap: 25px; */
+        font-size: 16px;
+    }
+
+    .header-nav-hamburger{
+        display: block;
+    }
+
+    .header-nav-items{
+        display: none;
+    }
+
+    .header-auction-status{
+        gap: 36px;
+    }
+
+    #live-auctions, #coming-soon, #ended-auctions {
+        width: 20px;
+        height: 20px;
+        
+    }
+
+    .grid-bar-box{
+        display: none;
+    }
+    .header-show-favorites{
+        gap: 26px;
+    }
+
+    .header-show-favorites-text{
+        display: none;
+    }
+
+    .header-damagetype-section{
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 30px;
+    }
+
+    .damage-type-grid-box{
+        display: flex;
+        gap: 26px;
+    }
+
+    .header-auction-status{
+        flex-basis: 0px;
+    }
+
+    .header-container{
+        gap: 29px;
+    }
+
+    .header-auction-inner{
+        flex-direction: column;
+        gap: 8px;
+        font-family:var(--Poppins-regular);
+        color: #22232B;
+        font-weight: 400;
+        font-size: 13px;
+        text-align: center;
+    }
+
+    #search{
+        width: 167px;
+    }
+
+    #search::placeholder{
+        width: 147px;
+        font-size: 15px;
+        font-weight: 400;
+        padding: 9.4px 0;
+        text-align: left;
+    }
+
+    .header-search-box{
+        gap: 24px;
+    }
+
+/* Middle- container */
+
+    .second-container{
+        padding-bottom: 0px;
+    }
+
+    .middle-container-right{
+        flex-basis: 20%;
+    }
+
+    .middle-container{
+        display: flex;
+    }
+    
+    .pagination-container{
+        padding: 18px 7px 29px 16px;
+        gap: 14px;
+        justify-content: center;
+    }
+
+    /* .pagination-container{
+        gap: 2.6rem;
+        padding: 29px 16px;
+    } */
+
+    .pagination-container .pagination-resp{
+        display: none;
+       
+    }
+    .pagination-container .pagination-resp-next{
+        display: flex;
+    }    
+    .vehicle-card {
+        width: 345px;
+        box-shadow: 6px 12px 24px #44444414;
+        background: #FFFFFF 0% 0% no-repeat padding-box;
+        border-radius: 6px;
+    }
+
+
+
+/* footer- section */
+
+footer{
+    justify-content: space-between;
+    gap: 0px;
+    padding: 25px 16px;
+}
+
+.footer-img-logo{
+    display: none;
+}
+.footer-verticalbar{
+    display: none;
+}
+
+.footer-img-mobilelogo{
+    display: block;
+}
+
+.footer-nav{
+    display: none;
+}
+.footer-envelope{
+    border: 1px solid #6B1D57;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+    box-shadow: 0px 8px 8px #43425D40;
+}
+
+.footer-envelope img{
+    height: 12px;
+    width: 14px;
+}
+
+
+.socials{
+    gap: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.socials img:nth-of-type(1){
+    width: 17px;
+    height: 17px;
+}
+.socials img:nth-of-type(2){
+    width: 8px;
+    height: 15px;
+}
+.socials img:nth-of-type(3){
+    width: 17px;
+    height: 14px;
+}
+}
+
